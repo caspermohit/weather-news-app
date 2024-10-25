@@ -1,0 +1,124 @@
+/* src/components/Weather.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background color */
+    margin: 0;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333; /* Darker text color for headings */
+}
+
+
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.current-weather, .nearby-locations {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e9ecef; /* Light gray background for weather sections */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Divider between list items */
+}
+
+li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column; /* Stack input and button on smaller screens */
+    }
+
+    input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add margin below input */
+    }
+}
+
+.weather-title {
+    font-size: 24px; /* Larger font for the title */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.weather-info {
+    font-size: 18px; /* Medium font for weather info */
+    margin: 5px 0; /* Space above and below each info line */
+}
+
+.weather-icon {
+    width: 50px; /* Set a fixed width for icons */
+    height: 50px; /* Set a fixed height for icons */
+}
+
+.nearby-locations-title {
+    font-size: 20px; /* Font size for nearby locations title */
+    margin-top: 20px; /* Space above the title */
+}
+
+.nearby-locations-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around; /* Space items evenly */
+}
+
+.nearby-location-item {
+    flex: 1 1 30%; /* Adjust the width to fit 3 items per row */
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    max-width: 30%; /* Ensure items don't exceed 30% width */
+}
+
+.nearby-location-item:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.current-weather span {
+    color: #ff4500; /* Change color for advice text */
+    font-weight: bold; /* Make advice text bold */
+}
